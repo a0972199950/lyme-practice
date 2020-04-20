@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lyme</title>
+
+	<link rel="manifest" href="/assets/manifest.json">
+	<link rel="icon" href="/assets/favicon.ico" sizes="64x64" type="image/png">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+		integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+		integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+	</script>
+
+</head>
+
+<body>
+	<!-- Modal -->
+	<div class="modal fade" id="createPostModal" role="dialog">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<h5 class="modal-title" id="createPostModalLabel">新增文章</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+
+				<div class="modal-body">
+					<div class="form-group">
+						<input type="text" class="form-control form-control-sm" placeholder="文章標題" id="postTitle">
+					</div>
+
+					<div class="form-group">
+						<textarea id="postContent" cols="30" rows="5" class="form-control form-control-sm" placeholder="文章內容"></textarea>
+					</div>
+
+					<div class="form-group">
+						<input type="text" class="form-control form-control-sm" id="postCover" value="https://picsum.photos/500/300">
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary" id="createPostBtn">確定</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-sm navbar-dark bg-secondary mb-4">
+		<a class="navbar-brand" href="/">首頁</a>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+			aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<button class="nav-item nav-link btn btn-outline-muted btn-sm" data-toggle="modal" data-target="#createPostModal">新增文章</div>
+			</div>
+
+			<div class="navbar-text">
+				<button class="btn btn-outline-light btn-sm ml-2" id="installApp">安裝應用</button>
+				<button class="btn btn-outline-light btn-sm ml-2" id="enableNotification">接受通知</button>
+				<button class="btn btn-outline-light btn-sm ml-2" id="notification">測試通知</button>
+				<button class="btn btn-outline-light btn-sm ml-2" id="subscribeNotification">訂閱通知</button>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="card-group" id="postsArea">
+		</div>
+	</div>
+
+</body>
+
+</html>

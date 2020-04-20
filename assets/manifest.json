@@ -1,0 +1,47 @@
+{
+  "_comment1": "chrome自動提示安裝必須條件: https://web.dev/install-criteria/",
+  "background_color": "#C7EDE6",
+  "theme_color": "#F1F3F4",
+  "description": "一個容易跟LINE搞錯的聊天軟體喔喔喔喔",
+  "dir": "auto",
+  "lang": "zh-TW",
+  "display": "fullscreen", "//_comment2": "chrome自動提示安裝必須條件: display需設為fullscreen, standalone, 或minimal-ui",
+  "icons": [
+    {
+      "src": "/assets/icon-48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-192.png", "//_comment3": "chrome自動提示安裝必須條件: 提供192px icon",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-512.png", "//_comment4": "chrome自動提示安裝必須條件: 提供512px icon",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "name": "Lyme", "//_comment5": "chrome自動提示安裝必須條件: 提供name或short_name",
+  "short_name": "Lyme", "//_comment6": "chrome自動提示安裝必須條件: 提供name或short_name",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false, "//_comment7": "chrome自動提示安裝必須條件: 需為false或不提供prefer_related_applications",
+  "scope": ".",
+  "start_url": "/", "//_comment8": "chrome自動提示安裝必須條件: 提供start_url"
+}
